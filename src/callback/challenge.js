@@ -25,12 +25,16 @@ function fetchData (url_api, callback) {
     //Por Ultimo enviamos la petición
     xhttp.send();
 }
+//1er llamado a la funcion de consulta con la api y el callback
 fetchData(API, function (error1, data1) {
-    if (error1) return console.error(error1);
-    fetchData(API + data1.results[0].id, (error2, data2) => {
-        if (error2) return console.error(error2);
+    if (error1) return console.error(error1); //Validamos si hay errores
+    //2do llamado para ver la posicion [0] de results que seria el primer personaje
+    fetchData(API + data1.results[10].id, (error2, data2) => {
+        if (error2) return console.error(error2); //Validamos si hay errores
+        //3ra llamada accedemos con la posicion de result[0].id al origen de la dimensión de ese personaje
         fetchData(data2.origin.url, (error3, data3) => {
-            if (error3) return console.error(error3);
+            if (error3) return console.error(error3); //Validamos si hay errores
+            //Mostramos los resultados
             console.log(`Cantidad de personaje es: ${data1.info.count}`);
             console.log(`Nombre del personaje es: ${data2.name}`);
             console.log(data3.dimension);
