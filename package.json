@@ -1,0 +1,26 @@
+{
+  "name": "asynchronous",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "callback": "node src/callback/callbackApi.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Omar-Monges/asynchronous-js.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "asynchronous"
+  ],
+  "author": "omar monges devomarmonges@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Omar-Monges/asynchronous-js/issues"
+  },
+  "homepage": "https://github.com/Omar-Monges/asynchronous-js#readme",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
+}
